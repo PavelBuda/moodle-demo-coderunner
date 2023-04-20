@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+    jobe:
+        image: trampgeek/jobeinabox:latest
+        restart: unless-stopped
+        ports:
+            - ${JOBE_PORT}:80
