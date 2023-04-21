@@ -61,6 +61,9 @@ docker.stop: ##@Docker Stop containers
 docker.down: ##@Docker Stop and remove containers
 	${DOCKER_COMPOSE} down
 
+app.fix.permissions: ##@App Fix permissions issues
+	${DOCKER_COMPOSE} exec webserver chmod 777 -R /var/www/html/question/type /var/www/html/question/behaviour
+
 app.bash: ##@App Enter bash in webserver container
 	${DOCKER_COMPOSE} exec webserver bash
 

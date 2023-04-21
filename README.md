@@ -1,7 +1,9 @@
-# moodle-demo-coderunner
-Demo local Moodle deploy with [Coderunner]
+# Moodle demo with Coderunner
+Sample local Moodle deployment with configuring Coderunner question types support and own Jobe server.
 
-# Configuration
+- **Jobe**: Rest API server which allow to execute different languages code.
+
+# Configuration and initial deployment
 1. Copy `.env.dist` to `.env`
 2. Update configuration in `.env`
 
@@ -11,16 +13,18 @@ Demo local Moodle deploy with [Coderunner]
 - `MOODLE_DOCKER_DB` - Database db driver ()
 - `MOODLE_DOCKER_WEB_PORT` - Moodle website localhost port
 - `MOODLE_DOCKER_DB_PORT`- Moodle database localhost port
-- `JOBE_PORT` - JobInABox website localhost port
+- `JOBE_PORT` - Jobe website localhost port
 
 3. Run `make docker.deploy.local`
-4. Navigate to `http://localhost:8888` and follow installation 
+4. Navigate to http://localhost:8888 and follow installation 
+
+[*] Initial deployment may take time as Jobe image is 1gb size
 
 # Coderunner plugin installation
 
 ### Install plugin from Moodle admin settins Plugins page
-- [qbehaviour_adaptive_adapted_for_coderunner](github.com/trampgeek/moodle-qbehaviour_adaptive_adapted_for_coderunner)
-- [qtype_coderunner](github.com/trampgeek/moodle-qtype_coderunner)
+- [qbehaviour_adaptive_adapted_for_coderunner](https://github.com/trampgeek/moodle-qbehaviour_adaptive_adapted_for_coderunner)
+- [qtype_coderunner](https://github.com/trampgeek/moodle-qtype_coderunner)
 
 ### Configuration
 1. Navigate to `Site administration > Plugins > CodeRunner`:
@@ -35,10 +39,10 @@ check that ip of `jobe` container is not in list of blocked.
 Or else it would not be available from Moodle.
 
 # Coderunner question creation guide
-[Sample Python question configuration guide] https://github.com/trampgeek/moodle-qtype_coderunner/blob/master/authorguide.md
+[Sample Python question configuration guide](https://github.com/trampgeek/moodle-qtype_coderunner/blob/master/authorguide.md)
 
 # Help links
 - [Moodle docker compose](https://github.com/moodlehq/moodle-docker)
 - [Moodle](https://github.com/moodle/moodle)
 - [CodeRunner](https://github.com/trampgeek/moodle-qtype_coderunner)
-- [JobInABox](https://hub.docker.com/r/trampgeek/jobeinabox)
+- [Jobe](https://hub.docker.com/r/trampgeek/jobeinabox)
