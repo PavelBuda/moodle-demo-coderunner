@@ -51,6 +51,7 @@ docker.deploy.local: ##@Docker Initial local deploy
 	cp moodle-docker/config.docker-template.php $$MOODLE_DOCKER_WWWROOT/config.php
 	cp docker-compose-extra.yml moodle-docker/local.yml
 	${DOCKER_COMPOSE} up -d
+	$(MAKE) app.fix.permissions
 
 docker.start: ##@Docker Start containers
 	${DOCKER_COMPOSE} up -d
