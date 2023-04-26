@@ -56,6 +56,9 @@ docker.deploy.local: ##@Docker Initial local deploy
 docker.start: ##@Docker Start containers
 	${DOCKER_COMPOSE} up -d
 
+docker.ps: ##@Docker List project containers
+	${DOCKER_COMPOSE} ps
+
 docker.stop: ##@Docker Stop containers
 	${DOCKER_COMPOSE} stop
 
