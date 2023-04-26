@@ -41,6 +41,13 @@ Or else it would not be available from Moodle.
 # Coderunner question creation guide
 [Sample Python question configuration guide](https://github.com/trampgeek/moodle-qtype_coderunner/blob/master/authorguide.md)
 
+# Samples:
+1. Create/Open `Course`
+2. Add `Quiz` block
+3. Navigate to `Question bank`
+4. In left action dropdown select `Import`
+5. Select `Moodle XML` format and upload file from `./samples/quiz_questions/`
+
 # Help links
 - [Moodle docker compose](https://github.com/moodlehq/moodle-docker)
 - [Moodle](https://github.com/moodle/moodle)
